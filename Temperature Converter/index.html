@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Temperature Converter</h1>
+
+        <div class="input-section">
+            <div class="input-group">
+                <div class="input-field">
+                    <label for="temperature">Temperature Value</label>
+                    <input type="number" id="temperature" placeholder="Enter temperature" step="any" />
+                    <div class="error" id="error-message">Please enter a valid number</div>
+                </div>
+
+                <div class="select-field">
+                    <label for="unit">Input Unit</label>
+                    <select id="unit">
+                        <option value="celsius">Celsius (°C)</option>
+                        <option value="fahrenheit">Fahrenheit (°F)</option>
+                        <option value="kelvin">Kelvin (K)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="results">
+            <div class="result-card celsius-card">
+                <div class="unit-label">Celsius</div>
+                <div class="temperature-value" id="celsius-value">--</div>
+                <div class="unit-symbol">°C</div>
+            </div>
+
+            <div class="result-card fahrenheit-card">
+                <div class="unit-label">Fahrenheit</div>
+                <div class="temperature-value" id="fahrenheit-value">--</div>
+                <div class="unit-symbol">°F</div>
+            </div>
+
+            <div class="result-card kelvin-card">
+                <div class="unit-label">Kelvin</div>
+                <div class="temperature-value" id="kelvin-value">--</div>
+                <div class="unit-symbol">K</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
