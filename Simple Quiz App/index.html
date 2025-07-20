@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Quiz App</title>
+    <link rel="stylesheet" href="./styles.css">
+    </head>       
+<body>
+    
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <h1 class="quiz-title">Knowledge Quiz</h1>
+            <p class="quiz-subtitle">Test your general knowledge!</p>
+        </div>
+
+        <div class="quiz-content">
+            <div class="quiz-info">
+                <span>Time: <span id="timer">00:00</span></span>
+                <span>Question <span id="current-question">1</span> of <span id="total-questions">5</span></span>
+            </div>
+            
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+
+            <div class="question-container" id="question-container">
+                <div class="question-number" id="question-number">Question 1</div>
+                <h2 class="question-text" id="question-text"></h2>
+                <div class="answers-container" id="answers-container"></div>
+            </div>
+
+            <div class="controls">
+                <button class="btn btn-secondary" id="prev-btn" onclick="previousQuestion()">Previous</button>
+                <button class="btn btn-primary" id="next-btn" onclick="nextQuestion()" disabled>Next</button>
+                <button class="btn btn-primary hidden" id="submit-btn" onclick="submitQuiz()">Submit Quiz</button>
+            </div>
+        </div>
+
+        <div class="results-container hidden" id="results-container">
+            <h2 style="color: #333; font-size: 2rem; margin-bottom: 20px;">🎉 Quiz Complete! 🎉</h2>
+            <div class="score-display" id="final-score">0/5 (0%)</div>
+            <div class="score-message" id="score-message">Calculating your score...</div>
+            <div class="score-details" id="score-details">
+                <p>Loading results...</p>
+            </div>
+            <button class="btn btn-primary" onclick="restartQuiz()" style="margin-top: 20px;">Take Quiz Again</button>
+        </div>
+    </div>
+        <script src="./script.js"></script>
+</body>
+</html>
